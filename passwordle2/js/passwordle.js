@@ -1683,7 +1683,9 @@ function randomPassword() {
 "captain1",
 "bubbles1"];
 
- let answer = passwords[random%1621];
+ let answer = passwords[random%1621-1];
+  console.log(random);
+  console.log(random%1621-1);
  console.log(answer);
 
  let letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -1707,7 +1709,10 @@ async function judgeEvent(expected, attempt) {
     let input = document.getElementById('input').value;
     let err = document.getElementById('err');
 
+
+
     let actual = await input;
+    actual = actual.toLowerCase();
     let result = judge(actual, expected);
 
     let output = document.getElementById(`attempt-${attempt}`);
