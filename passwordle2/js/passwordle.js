@@ -1,6 +1,6 @@
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789';
 const [CORRECT, PRESENT, ABSENT, EMPTY] = [0, 1, 2, 3];
-const MAX_ATTEMPT = 10;
+const MAX_ATTEMPT = 20;
 
 function rand_from_seed(x, iterations){
   iterations = iterations || 100;
