@@ -61,13 +61,16 @@
       }
     </style>
 
-    <script src="js/passwordle.js"></script>
+
+
+    <script src="js/passwordle.js?v=1"></script>
 
 
 
     <script>
       let attempt = 0;
       window.onload = async function() {
+
           let answer = await randomPassword();
           let input = document.getElementById('input');
           let judge = document.getElementById('judge');
