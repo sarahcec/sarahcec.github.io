@@ -63,13 +63,12 @@
 
     <script src="js/passwordle.js"></script>
 
-    <script>
-    </script>
+
 
     <script>
       let attempt = 0;
       window.onload = async function() {
-          let answer = await hash(randomPassword());
+          let answer = await randomPassword();
           let input = document.getElementById('input');
           let judge = document.getElementById('judge');
           judge.addEventListener('click', (() => {
@@ -82,20 +81,27 @@
           }));
           let output = document.getElementById('output');
           for (let i = 0; i < MAX_ATTEMPT; ++i) {
-              let length = 64;
+              let length = 8;
               let dummy = '_'.repeat(length);
               let empty = Array.from({length}, (() => EMPTY));
               output.innerHTML += (
-                  `<div id="attempt-${i}">${colorize(dummy, empty)}</div>`
+                  `<div id="attempt-${i}">${colorize(dummy, empty)} </div>`
               );
+                     
           }
           input.focus();
       }
     </script>
+
+
   </head>
 
   <body>
     <h1>passWORDLE 2 - it's not impossible this time</h1>
+    <div id="debug">
+    	
+
+    </div>
     <div>
       password: <input type="text" id="input"> <button id="judge">enter</button>
     </div>
