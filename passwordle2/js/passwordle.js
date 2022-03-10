@@ -1683,9 +1683,9 @@ function randomPassword() {
 "captain1",
 "bubbles1"];
 
- let answer = passwords[random%1621-1];
+ let answer = passwords[random%1621];
   console.log(random);
-  console.log(random%1621-1);
+  console.log(random%1621);
  console.log(answer);
 
  let letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
